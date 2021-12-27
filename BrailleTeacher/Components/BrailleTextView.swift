@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BrailleTextView: View {
-    var symbol: Symbol
+    var brailleRepresentable: BrailleRepresentable
     var isEditable: Bool
     
     var body: some View {
@@ -20,10 +20,10 @@ struct BrailleTextView: View {
             VStack {
                 Spacer(minLength: 6)
                 
-                Text(symbol.rawValue)
+                Text(brailleRepresentable.toString)
                     .font(.system(size: 14, weight: .bold))
                 
-                BrailleView(symbol: symbol, isEditable: isEditable)
+                BrailleView(brailleRepresentable: brailleRepresentable, isEditable: isEditable)
                 
                 Spacer(minLength: 6)
             }
@@ -34,7 +34,7 @@ struct BrailleTextView: View {
 
 struct BrailleTextView_Previews: PreviewProvider {
     static var previews: some View {
-        BrailleTextView(symbol: .a, isEditable: false)
+        BrailleTextView(brailleRepresentable: Letter.a, isEditable: false)
             .frame(width: 100, height: 120)
     }
 }

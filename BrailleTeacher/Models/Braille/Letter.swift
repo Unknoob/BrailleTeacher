@@ -1,18 +1,15 @@
 //
-//  Symbol.swift
+//  Letter.swift
 //  BrailleTeacher
 //
-//  Created by Gabriel Beltrame Silva on 26/12/21.
+//  Created by Gabriel Beltrame Silva on 27/12/21.
 //
 
 import Foundation
 
-enum Symbol: String, CaseIterable, Identifiable {
-    var id: String {
-        return self.rawValue
-    }
-    
-    // MARK: - Letters
+// MARK: - Enum
+enum Letter: String, CaseIterable {
+    // MARK: - Cases
     case a = "A"
     case b = "B"
     case c = "C"
@@ -39,40 +36,36 @@ enum Symbol: String, CaseIterable, Identifiable {
     case x = "X"
     case y = "Y"
     case z = "Z"
-    
-    // MARK: - Numbers
-    case zero = "0"
-    case one = "1"
-    case two = "2"
-    case three = "3"
-    case four = "4"
-    case five = "5"
-    case six = "6"
-    case seven = "7"
-    case eight = "8"
-    case nine = "9"
-    
-    // MARK: - Functions
-    
+}
+
+// MARK: - Identifiable
+extension Letter: Identifiable {
+    var id: String {
+        return self.rawValue
+    }
+}
+
+// MARK: - BrailleRepresentable
+extension Letter: BrailleRepresentable {
     var toInt: UInt8 {
         switch self {
-        case .a, .one:
+        case .a:
             return 0b10000000
-        case .b, .two:
+        case .b:
             return 0b10100000
-        case .c, .three:
+        case .c:
             return 0b11000000
-        case .d, .four:
+        case .d:
             return 0b11010000
-        case .e, .five:
+        case .e:
             return 0b10010000
-        case .f, .six:
+        case .f:
             return 0b11100000
-        case .g, .seven:
+        case .g:
             return 0b11110000
-        case .h, .eight:
+        case .h:
             return 0b10110000
-        case .i, .nine:
+        case .i:
             return 0b01100000
         case .j:
             return 0b01110000
@@ -108,8 +101,10 @@ enum Symbol: String, CaseIterable, Identifiable {
             return 0b11011100
         case .z:
             return 0b10011100
-        default:
-            return 0b00000000
         }
+    }
+    
+    var toString: String {
+        return self.rawValue
     }
 }

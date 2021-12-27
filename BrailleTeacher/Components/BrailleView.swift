@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BrailleView: View {
-    var symbol: Symbol
+    var brailleRepresentable: BrailleRepresentable
     var isEditable: Bool
     
     var body: some View {
@@ -19,34 +19,14 @@ struct BrailleView: View {
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b10000000) >> 7 == 1,
+                    isSelected: (brailleRepresentable.toInt & 0b10000000) >> 7 == 1,
                     isEditable: isEditable
                 )
                 
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b01000000) >> 6 == 1,
-                    isEditable: isEditable
-                )
-                
-                Spacer(minLength: 4)
-            }
-            
-            Spacer(minLength: 4)
-            
-            HStack {
-                Spacer(minLength: 4)
-                
-                BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b00100000) >> 5 == 1,
-                    isEditable: isEditable
-                )
-                
-                Spacer(minLength: 4)
-                
-                BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b00010000) >> 4 == 1,
+                    isSelected: (brailleRepresentable.toInt & 0b01000000) >> 6 == 1,
                     isEditable: isEditable
                 )
                 
@@ -59,14 +39,34 @@ struct BrailleView: View {
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b00001000) >> 3 == 1,
+                    isSelected: (brailleRepresentable.toInt & 0b00100000) >> 5 == 1,
                     isEditable: isEditable
                 )
                 
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (symbol.toInt & 0b00000100) >> 2 == 1,
+                    isSelected: (brailleRepresentable.toInt & 0b00010000) >> 4 == 1,
+                    isEditable: isEditable
+                )
+                
+                Spacer(minLength: 4)
+            }
+            
+            Spacer(minLength: 4)
+            
+            HStack {
+                Spacer(minLength: 4)
+                
+                BrailleViewButton(
+                    isSelected: (brailleRepresentable.toInt & 0b00001000) >> 3 == 1,
+                    isEditable: isEditable
+                )
+                
+                Spacer(minLength: 4)
+                
+                BrailleViewButton(
+                    isSelected: (brailleRepresentable.toInt & 0b00000100) >> 2 == 1,
                     isEditable: isEditable
                 )
                 
@@ -80,6 +80,6 @@ struct BrailleView: View {
 
 struct BrailleView_Previews: PreviewProvider {
     static var previews: some View {
-        BrailleView(symbol: .h, isEditable: false)
+        BrailleView(brailleRepresentable: Letter.h, isEditable: false)
     }
 }

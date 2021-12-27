@@ -13,6 +13,10 @@
 		002A215E2779390800E97313 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215D2779390800E97313 /* Symbol.swift */; };
 		002A21602779420900E97313 /* BrailleViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215F2779420900E97313 /* BrailleViewButton.swift */; };
 		002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A2161277943CE00E97313 /* BrailleTextView.swift */; };
+		002A216527798A9500E97313 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A216427798A9500E97313 /* Colors.swift */; };
+		002A2167277990C100E97313 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A2166277990C100E97313 /* Number.swift */; };
+		002A2169277990E500E97313 /* Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A2168277990E500E97313 /* Letter.swift */; };
+		002A216C2779917C00E97313 /* BrailleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A216B2779917C00E97313 /* BrailleRepresentable.swift */; };
 		00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A21827792B5C002C11BD /* BrailleTeacherApp.swift */; };
 		00B8A21B27792B5C002C11BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A21A27792B5C002C11BD /* HomeView.swift */; };
 		00B8A21D27792B5F002C11BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B8A21C27792B5F002C11BD /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 		002A215D2779390800E97313 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		002A215F2779420900E97313 /* BrailleViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleViewButton.swift; sourceTree = "<group>"; };
 		002A2161277943CE00E97313 /* BrailleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTextView.swift; sourceTree = "<group>"; };
+		002A216427798A9500E97313 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		002A2166277990C100E97313 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		002A2168277990E500E97313 /* Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Letter.swift; sourceTree = "<group>"; };
+		002A216B2779917C00E97313 /* BrailleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleRepresentable.swift; sourceTree = "<group>"; };
 		00B8A21527792B5C002C11BD /* BrailleTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B8A21827792B5C002C11BD /* BrailleTeacherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherApp.swift; sourceTree = "<group>"; };
 		00B8A21A27792B5C002C11BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -113,9 +121,28 @@
 		002A215C277938BF00E97313 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				002A215D2779390800E97313 /* Symbol.swift */,
+				002A216A2779915B00E97313 /* Braille */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		002A216327798A7E00E97313 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				002A216427798A9500E97313 /* Colors.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		002A216A2779915B00E97313 /* Braille */ = {
+			isa = PBXGroup;
+			children = (
+				002A215D2779390800E97313 /* Symbol.swift */,
+				002A2166277990C100E97313 /* Number.swift */,
+				002A2168277990E500E97313 /* Letter.swift */,
+				002A216B2779917C00E97313 /* BrailleRepresentable.swift */,
+			);
+			path = Braille;
 			sourceTree = "<group>";
 		};
 		00B8A20C27792B5C002C11BD = {
@@ -141,6 +168,7 @@
 		00B8A21727792B5C002C11BD /* BrailleTeacher */ = {
 			isa = PBXGroup;
 			children = (
+				002A216327798A7E00E97313 /* Generated */,
 				002A215C277938BF00E97313 /* Models */,
 				002A21592779325E00E97313 /* Dictionary */,
 				002A21582779325500E97313 /* Home */,
@@ -307,13 +335,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002A216C2779917C00E97313 /* BrailleRepresentable.swift in Sources */,
 				002A215B2779329800E97313 /* BrailleView.swift in Sources */,
+				002A216527798A9500E97313 /* Colors.swift in Sources */,
+				002A2167277990C100E97313 /* Number.swift in Sources */,
 				002A21572779324400E97313 /* DictionaryView.swift in Sources */,
 				00B8A21B27792B5C002C11BD /* HomeView.swift in Sources */,
 				002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */,
 				002A215527792EE700E97313 /* HomeButton.swift in Sources */,
 				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
 				00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */,
+				002A2169277990E500E97313 /* Letter.swift in Sources */,
 				002A215E2779390800E97313 /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
