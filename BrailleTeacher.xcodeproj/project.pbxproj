@@ -24,6 +24,13 @@
 		00B8A22A27792B60002C11BD /* BrailleTeacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A22927792B60002C11BD /* BrailleTeacherTests.swift */; };
 		00B8A23427792B60002C11BD /* BrailleTeacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A23327792B60002C11BD /* BrailleTeacherUITests.swift */; };
 		00B8A23627792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A23527792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift */; };
+		00E43CAB277A71D0003EA825 /* ClassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAA277A71D0003EA825 /* ClassListView.swift */; };
+		00E43CAE277A727E003EA825 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAD277A727E003EA825 /* Class.swift */; };
+		00E43CB0277A734E003EA825 /* ClassList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAF277A734E003EA825 /* ClassList.swift */; };
+		00E43CB6277A76F5003EA825 /* ClassPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CB5277A76F5003EA825 /* ClassPlan.swift */; };
+		00E43CB8277A7727003EA825 /* ClassChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CB7277A7727003EA825 /* ClassChallenge.swift */; };
+		00E43CBA277A7772003EA825 /* ClassChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CB9277A7772003EA825 /* ClassChallengeType.swift */; };
+		00E43CBC277A79A6003EA825 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBB277A79A6003EA825 /* ClassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,13 @@
 		00B8A22F27792B60002C11BD /* BrailleTeacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrailleTeacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B8A23327792B60002C11BD /* BrailleTeacherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherUITests.swift; sourceTree = "<group>"; };
 		00B8A23527792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00E43CAA277A71D0003EA825 /* ClassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListView.swift; sourceTree = "<group>"; };
+		00E43CAD277A727E003EA825 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		00E43CAF277A734E003EA825 /* ClassList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassList.swift; sourceTree = "<group>"; };
+		00E43CB5277A76F5003EA825 /* ClassPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPlan.swift; sourceTree = "<group>"; };
+		00E43CB7277A7727003EA825 /* ClassChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassChallenge.swift; sourceTree = "<group>"; };
+		00E43CB9277A7772003EA825 /* ClassChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassChallengeType.swift; sourceTree = "<group>"; };
+		00E43CBB277A79A6003EA825 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +135,7 @@
 		002A215C277938BF00E97313 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				00E43CAC277A726A003EA825 /* Classes */,
 				002A216A2779915B00E97313 /* Braille */,
 			);
 			path = Models;
@@ -168,6 +183,7 @@
 		00B8A21727792B5C002C11BD /* BrailleTeacher */ = {
 			isa = PBXGroup;
 			children = (
+				00E43CA9277A715E003EA825 /* Classes */,
 				002A216327798A7E00E97313 /* Generated */,
 				002A215C277938BF00E97313 /* Models */,
 				002A21592779325E00E97313 /* Dictionary */,
@@ -203,6 +219,43 @@
 				00B8A23527792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift */,
 			);
 			path = BrailleTeacherUITests;
+			sourceTree = "<group>";
+		};
+		00E43CA9277A715E003EA825 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00E43CB2277A7602003EA825 /* Detail */,
+				00E43CB1277A75FA003EA825 /* List */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		00E43CAC277A726A003EA825 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				00E43CAD277A727E003EA825 /* Class.swift */,
+				00E43CAF277A734E003EA825 /* ClassList.swift */,
+				00E43CB5277A76F5003EA825 /* ClassPlan.swift */,
+				00E43CB7277A7727003EA825 /* ClassChallenge.swift */,
+				00E43CB9277A7772003EA825 /* ClassChallengeType.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		00E43CB1277A75FA003EA825 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				00E43CAA277A71D0003EA825 /* ClassListView.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		00E43CB2277A7602003EA825 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				00E43CBB277A79A6003EA825 /* ClassView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,17 +388,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E43CB6277A76F5003EA825 /* ClassPlan.swift in Sources */,
+				00E43CAB277A71D0003EA825 /* ClassListView.swift in Sources */,
 				002A216C2779917C00E97313 /* BrailleRepresentable.swift in Sources */,
+				00E43CBA277A7772003EA825 /* ClassChallengeType.swift in Sources */,
+				00E43CAE277A727E003EA825 /* Class.swift in Sources */,
 				002A215B2779329800E97313 /* BrailleView.swift in Sources */,
 				002A216527798A9500E97313 /* Colors.swift in Sources */,
+				00E43CB0277A734E003EA825 /* ClassList.swift in Sources */,
 				002A2167277990C100E97313 /* Number.swift in Sources */,
 				002A21572779324400E97313 /* DictionaryView.swift in Sources */,
 				00B8A21B27792B5C002C11BD /* HomeView.swift in Sources */,
+				00E43CBC277A79A6003EA825 /* ClassView.swift in Sources */,
 				002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */,
 				002A215527792EE700E97313 /* HomeButton.swift in Sources */,
 				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
 				00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */,
 				002A2169277990E500E97313 /* Letter.swift in Sources */,
+				00E43CB8277A7727003EA825 /* ClassChallenge.swift in Sources */,
 				002A215E2779390800E97313 /* Symbol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,31 +10,36 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Braille Teacher")
-                    .font(.system(size: 25, weight: .bold))
-                    .padding()
-                
-                Spacer(minLength: 20)
-                
-                NavigationLink(destination: DictionaryView()) {
-                    Text("Dictionary")
-                        .padding()
-                        .background(.blue)
-                        .foregroundColor(.white)
+            ScrollView {
+                VStack {
+                    Spacer(minLength: 20)
+                    
+                    NavigationLink(destination: DictionaryView()) {
+                        Text("Dictionary")
+                            .padding()
+                            .background(.blue)
+                            .foregroundColor(.white)
+                    }
+                    .cornerRadius(15)
+                    
+                    NavigationLink(destination: ClassListView()) {
+                        Text("Classes")
+                            .padding()
+                            .background(.blue)
+                            .foregroundColor(.white)
+                    }
+                    .cornerRadius(15)
+                    
+                    HomeButton(text: "Free Practice")
+                    
+                    Spacer(minLength: 20)
+                    
+                    HomeButton(text: "Settings")
+                    
+                    Spacer(minLength: 20)
                 }
-                .cornerRadius(15)
-                
-                HomeButton(text: "Classes")
-                
-                HomeButton(text: "Free Practice")
-                
-                Spacer(minLength: 20)
-                
-                HomeButton(text: "Settings")
-                
-                Spacer(minLength: 20)
             }
+            .navigationTitle("Braille Teacher")
         }
     }
 }
