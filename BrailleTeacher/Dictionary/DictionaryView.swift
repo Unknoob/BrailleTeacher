@@ -10,7 +10,7 @@ import SwiftUI
 struct DictionaryView: View {
     
     let columns = [
-        GridItem(.adaptive(minimum: 60, maximum: 80))
+        GridItem(.adaptive(minimum: 60, maximum: 80), spacing: 6)
     ]
     
     var body: some View {

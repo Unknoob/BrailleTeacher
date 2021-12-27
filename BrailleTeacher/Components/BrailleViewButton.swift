@@ -20,6 +20,6 @@ struct BrailleViewButton: View {
 
 struct BrailleViewButton_Previews: PreviewProvider {
     static var previews: some View {
-        BrailleViewButton(isSelected: false)
+        BrailleViewButton(isSelected: true)
     }
 }
