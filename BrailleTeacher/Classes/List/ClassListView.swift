@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct ClassListView: View {
-    
+    @State var isPresentingModal = false
+    @State var selectedClass: Class? = nil
+        
     var body: some View {
         ScrollView {
             VStack {
                 ForEach(ClassList.classes) { currentClass in
-                    NavigationLink(destination: ClassView(classPlan: currentClass.buildClassPlan())) {
-                        Text(currentClass.name)
-                            .padding()
-                            .background(.blue)
-                            .foregroundColor(.white)
+                    HomeButton(text: currentClass.name) {
+                        selectedClass = currentClass
+                        isPresentingModal.toggle()
                     }
-                    .cornerRadius(15)
                 }
             }
+            // Workaround to State not being updated when not observed
+            Text(selectedClass?.name ?? "")
+                .hidden()
         }
         .navigationTitle("Classes")
+        
+        .fullScreenCover(isPresented: $isPresentingModal, onDismiss: nil) {
+            ClassView(
+                isBeingPresented: $isPresentingModal,
+                classPlan: selectedClass!.buildClassPlan()
+            )
+        }
     }
 }
 

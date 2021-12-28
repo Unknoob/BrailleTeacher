@@ -9,10 +9,11 @@ import SwiftUI
 
 struct HomeButton: View {
     var text: String
+    var action: (() -> Void)?
     
     var body: some View {
         Button {
-            
+            action?()
         } label: {
             Text(text)
                 .padding()
@@ -25,6 +26,6 @@ struct HomeButton: View {
 
 struct HomeButton_Previews: PreviewProvider {
     static var previews: some View {
-        HomeButton(text: "Example")
+        HomeButton(text: "Example", action: nil)
     }
 }

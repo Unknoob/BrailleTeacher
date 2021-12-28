@@ -8,21 +8,33 @@
 import SwiftUI
 
 struct ClassView: View {
+    @Binding var isBeingPresented: Bool
+    
     let classPlan: ClassPlan
     
     var body: some View {
-        ScrollView {
-            VStack {
-                
+        NavigationView {
+            ScrollView {
+                VStack {
+                    
+                }
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Give up") {
+                        isBeingPresented = false
+                    }
+                }
+            }
+            .navigationTitle("Class: \(classPlan.name)")
         }
-        .navigationTitle("Class: \(classPlan.name)")
+        
     }
 }
 
 struct ClassView_Previews: PreviewProvider {
     static var previews: some View {
-        ClassView(classPlan: ClassList.classes.first!.buildClassPlan())
+        ClassView(isBeingPresented: .constant(true), classPlan: ClassList.classes.first!.buildClassPlan())
     }
 }
 
