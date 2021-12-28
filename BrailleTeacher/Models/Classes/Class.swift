@@ -28,8 +28,6 @@ extension Class {
             challenges.append(ClassChallenge(type: .characterToBraille, question: includedCharacter, answer: nil))
         }
         
-        challenges.shuffle()
-        
-        return ClassPlan(name: name, challenges: challenges)
+        return ClassPlan(name: name, challenges: challenges.shuffled())
     }
 }

@@ -16,7 +16,8 @@ struct ClassView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    
+                    Text(classPlan.challenges.first!.question.toString)
+                    KeyboardView(difficulty: .hard, correctAnswer: classPlan.challenges.first!.question)
                 }
             }
             .toolbar {

@@ -31,6 +31,9 @@
 		00E43CB8277A7727003EA825 /* ClassChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CB7277A7727003EA825 /* ClassChallenge.swift */; };
 		00E43CBA277A7772003EA825 /* ClassChallengeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CB9277A7772003EA825 /* ClassChallengeType.swift */; };
 		00E43CBC277A79A6003EA825 /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBB277A79A6003EA825 /* ClassView.swift */; };
+		00E43CBE277AC0FE003EA825 /* ClassDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBD277AC0FE003EA825 /* ClassDifficulty.swift */; };
+		00E43CC0277AC210003EA825 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBF277AC210003EA825 /* KeyboardView.swift */; };
+		00E43CC2277AC396003EA825 /* AnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CC1277AC396003EA825 /* AnswersManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		00E43CB7277A7727003EA825 /* ClassChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassChallenge.swift; sourceTree = "<group>"; };
 		00E43CB9277A7772003EA825 /* ClassChallengeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassChallengeType.swift; sourceTree = "<group>"; };
 		00E43CBB277A79A6003EA825 /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
+		00E43CBD277AC0FE003EA825 /* ClassDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDifficulty.swift; sourceTree = "<group>"; };
+		00E43CBF277AC210003EA825 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		00E43CC1277AC396003EA825 /* AnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				002A215A2779329800E97313 /* BrailleView.swift */,
 				002A215F2779420900E97313 /* BrailleViewButton.swift */,
 				002A2161277943CE00E97313 /* BrailleTextView.swift */,
+				00E43CBF277AC210003EA825 /* KeyboardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -238,6 +245,7 @@
 				00E43CB5277A76F5003EA825 /* ClassPlan.swift */,
 				00E43CB7277A7727003EA825 /* ClassChallenge.swift */,
 				00E43CB9277A7772003EA825 /* ClassChallengeType.swift */,
+				00E43CBD277AC0FE003EA825 /* ClassDifficulty.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				00E43CBB277A79A6003EA825 /* ClassView.swift */,
+				00E43CC1277AC396003EA825 /* AnswersManager.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -397,10 +406,13 @@
 				002A216527798A9500E97313 /* Colors.swift in Sources */,
 				00E43CB0277A734E003EA825 /* ClassList.swift in Sources */,
 				002A2167277990C100E97313 /* Number.swift in Sources */,
+				00E43CC2277AC396003EA825 /* AnswersManager.swift in Sources */,
+				00E43CC0277AC210003EA825 /* KeyboardView.swift in Sources */,
 				002A21572779324400E97313 /* DictionaryView.swift in Sources */,
 				00B8A21B27792B5C002C11BD /* HomeView.swift in Sources */,
 				00E43CBC277A79A6003EA825 /* ClassView.swift in Sources */,
 				002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */,
+				00E43CBE277AC0FE003EA825 /* ClassDifficulty.swift in Sources */,
 				002A215527792EE700E97313 /* HomeButton.swift in Sources */,
 				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
 				00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */,
