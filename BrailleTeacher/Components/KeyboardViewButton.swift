@@ -9,14 +9,14 @@ import SwiftUI
 
 struct KeyboardViewButton: View {
     let answer: BrailleRepresentable?
-    var action: ((BrailleRepresentable) -> Void)?
+    var selectedAnswer: ((BrailleRepresentable) -> Void)?
     
     var body: some View {
         Button {
             guard let answer = answer else {
                 return
             }
-            action?(answer)
+            selectedAnswer?(answer)
         } label: {
             Text(answer?.toString ?? " ")
                 .frame(width: 30, height: 30)

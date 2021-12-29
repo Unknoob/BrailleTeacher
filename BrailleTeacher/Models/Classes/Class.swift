@@ -28,17 +28,15 @@ extension Class {
             challenges.append(
                 ClassChallenge(
                     type: .brailleToCharacter,
-                    question: includedCharacter,
-                    answer: nil
+                    question: includedCharacter
                 )
             )
-            challenges.append(
-                ClassChallenge(
-                    type: .characterToBraille,
-                    question: includedCharacter,
-                    answer: nil
-                )
-            )
+//            challenges.append(
+//                ClassChallenge(
+//                    type: .characterToBraille,
+//                    question: includedCharacter
+//                )
+//            )
         }
         
         return ClassPlan(

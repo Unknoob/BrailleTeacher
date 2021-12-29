@@ -10,5 +10,5 @@ import Foundation
 struct ClassChallenge {
     let type: ClassChallengeType
     let question: BrailleRepresentable
-    var answer: BrailleRepresentable?
+    var answer: BrailleRepresentable? = nil
 }

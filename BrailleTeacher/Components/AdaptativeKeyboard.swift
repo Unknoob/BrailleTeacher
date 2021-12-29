@@ -11,6 +11,7 @@ struct AdaptativeKeyboard: View {
     let difficulty: ClassDifficulty
     let possibleAnswers: [BrailleRepresentable]
     let challenge: ClassChallenge
+    let selectedAnswer: ((BrailleRepresentable) -> Void)?
     
     var body: some View {
         switch challenge.type {
@@ -23,7 +24,8 @@ struct AdaptativeKeyboard: View {
             KeyboardView(
                 difficulty: difficulty,
                 possibleAnswers: possibleAnswers,
-                correctAnswer: challenge.question
+                correctAnswer: challenge.question,
+                selectedAnswer: selectedAnswer
             )
         }
         
@@ -35,7 +37,8 @@ struct AdaptativeKeyboard_Previews: PreviewProvider {
         AdaptativeKeyboard(
             difficulty: ClassList.classes.first!.difficulty,
             possibleAnswers: ClassList.classes.first!.includedCharacters,
-            challenge: ClassList.classes.first!.buildClassPlan().challenges.first!
+            challenge: ClassList.classes.first!.buildClassPlan().challenges.first!,
+            selectedAnswer: nil
         )
     }
 }
