@@ -14,11 +14,19 @@ struct ClassView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    Text(classPlan.challenges.first!.question.toString)
-                    KeyboardView(difficulty: .hard, correctAnswer: classPlan.challenges.first!.question)
-                }
+            VStack {
+                Text(classPlan.challenges.first!.question.toString)
+                    .font(.system(size: 26, weight: .bold))
+                
+                Spacer(minLength: 20)
+                
+                KeyboardView(
+                    difficulty: .hard,
+                    possibleAnswers: classPlan.possibleAnswers,
+                    correctAnswer: classPlan.challenges.first!.question
+                )
+                
+                Spacer(minLength: 20)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -27,7 +35,6 @@ struct ClassView: View {
                     }
                 }
             }
-            .navigationTitle("Class: \(classPlan.name)")
         }
         
     }

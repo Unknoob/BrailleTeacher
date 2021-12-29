@@ -9,5 +9,6 @@ import Foundation
 
 struct ClassPlan {
     let name: String
+    let possibleAnswers: [BrailleRepresentable]
     let challenges: [ClassChallenge]
 }

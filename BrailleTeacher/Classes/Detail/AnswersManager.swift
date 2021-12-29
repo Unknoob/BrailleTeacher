@@ -8,18 +8,37 @@
 import Foundation
 
 class AnswersManager {
-    static func getAnswers(forDifficulty difficulty: ClassDifficulty, correctAnswer: BrailleRepresentable) -> [BrailleRepresentable] {
-        var answers: [BrailleRepresentable] = [correctAnswer]
+    static func getAnswers(
+        forDifficulty difficulty: ClassDifficulty,
+        possibleAnswers: [BrailleRepresentable],
+        correctAnswer: BrailleRepresentable
+    ) -> [BrailleRepresentable] {
+        let answersNeeded = difficulty.rawValue * difficulty.rawValue
         
-        while answers.count < difficulty.rawValue * difficulty.rawValue {
-            if
-                let randomElement = BrailleCharacters.allCharacters.randomElement(),
-                !answers.contains(where: { $0.toInt == randomElement.toInt })
-            {
-                answers.append(randomElement)
+        guard possibleAnswers.count > answersNeeded else {
+            if let lowerDifficulty = difficulty.lowered() {
+                return getAnswers(
+                    forDifficulty: lowerDifficulty,
+                    possibleAnswers: possibleAnswers,
+                    correctAnswer: correctAnswer
+                )
+            } else {
+                return getAnswers(
+                    forDifficulty: difficulty,
+                    possibleAnswers: BrailleCharacters.allCharacters,
+                    correctAnswer: correctAnswer
+                )
             }
         }
         
-        return answers.shuffled()
+        var answers: [BrailleRepresentable] = Array(possibleAnswers.shuffled().prefix(answersNeeded))
+        
+        if answers.contains(where: { $0.toInt == correctAnswer.toInt }) {
+            return answers
+        } else {
+            answers = answers.dropLast()
+            answers.append(correctAnswer)
+            return answers.shuffled()
+        }
     }
 }

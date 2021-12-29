@@ -24,10 +24,26 @@ extension Class {
         var challenges: [ClassChallenge] = []
         
         self.includedCharacters.forEach { includedCharacter in
-            challenges.append(ClassChallenge(type: .brailleToCharacter, question: includedCharacter, answer: nil))
-            challenges.append(ClassChallenge(type: .characterToBraille, question: includedCharacter, answer: nil))
+            challenges.append(
+                ClassChallenge(
+                    type: .brailleToCharacter,
+                    question: includedCharacter,
+                    answer: nil
+                )
+            )
+            challenges.append(
+                ClassChallenge(
+                    type: .characterToBraille,
+                    question: includedCharacter,
+                    answer: nil
+                )
+            )
         }
         
-        return ClassPlan(name: name, challenges: challenges.shuffled())
+        return ClassPlan(
+            name: name,
+            possibleAnswers: includedCharacters,
+            challenges: challenges.shuffled()
+        )
     }
 }

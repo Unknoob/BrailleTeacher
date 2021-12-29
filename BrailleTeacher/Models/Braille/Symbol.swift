@@ -10,7 +10,13 @@ import Foundation
 // MARK: - Enum
 enum Symbol: String, CaseIterable {
     // MARK: - Cases
-    case a = "A"
+    case comma = ","
+    case dot = "."
+    case exclamation = "!"
+    case interrogation = "?"
+    case singleQuote = "'"
+    case colon = ":"
+    case semicolon = ";"
     
 }
 
@@ -25,8 +31,20 @@ extension Symbol: Identifiable {
 extension Symbol: BrailleRepresentable {
     var toInt: UInt8 {
         switch self {
-        default:
-            return 0b00000000
+        case .comma:
+            return 0b00100000
+        case .dot:
+            return 0b00110100
+        case .exclamation:
+            return 0b00111000
+        case .interrogation:
+            return 0b00101100
+        case .singleQuote:
+            return 0b00001000
+        case .colon:
+            return 0b00110000
+        case .semicolon:
+            return 0b00101000
         }
     }
     
