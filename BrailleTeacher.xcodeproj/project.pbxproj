@@ -19,6 +19,7 @@
 		002A216C2779917C00E97313 /* BrailleRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A216B2779917C00E97313 /* BrailleRepresentable.swift */; };
 		00464796277BC59D006591D6 /* KeyboardViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00464795277BC59D006591D6 /* KeyboardViewButton.swift */; };
 		00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00464798277BD1A7006591D6 /* Array+Extensions.swift */; };
+		0046479B277BE16A006591D6 /* AdaptativeKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */; };
 		00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A21827792B5C002C11BD /* BrailleTeacherApp.swift */; };
 		00B8A21B27792B5C002C11BD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A21A27792B5C002C11BD /* HomeView.swift */; };
 		00B8A21D27792B5F002C11BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B8A21C27792B5F002C11BD /* Assets.xcassets */; };
@@ -68,6 +69,7 @@
 		002A216B2779917C00E97313 /* BrailleRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleRepresentable.swift; sourceTree = "<group>"; };
 		00464795277BC59D006591D6 /* KeyboardViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewButton.swift; sourceTree = "<group>"; };
 		00464798277BD1A7006591D6 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeKeyboard.swift; sourceTree = "<group>"; };
 		00B8A21527792B5C002C11BD /* BrailleTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B8A21827792B5C002C11BD /* BrailleTeacherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherApp.swift; sourceTree = "<group>"; };
 		00B8A21A27792B5C002C11BD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				002A2161277943CE00E97313 /* BrailleTextView.swift */,
 				00E43CBF277AC210003EA825 /* KeyboardView.swift */,
 				00464795277BC59D006591D6 /* KeyboardViewButton.swift */,
+				0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */,
 				00E43CBE277AC0FE003EA825 /* ClassDifficulty.swift in Sources */,
 				00464796277BC59D006591D6 /* KeyboardViewButton.swift in Sources */,
+				0046479B277BE16A006591D6 /* AdaptativeKeyboard.swift in Sources */,
 				002A215527792EE700E97313 /* HomeButton.swift in Sources */,
 				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
 				00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */,

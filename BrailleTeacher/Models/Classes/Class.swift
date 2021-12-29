@@ -9,6 +9,7 @@ import Foundation
 
 struct Class {
     let name: String
+    let difficulty: ClassDifficulty
     let includedCharacters: [BrailleRepresentable]
     let isPracticeMode: Bool
 }
@@ -42,6 +43,7 @@ extension Class {
         
         return ClassPlan(
             name: name,
+            difficulty: difficulty,
             possibleAnswers: includedCharacters,
             challenges: challenges.shuffled()
         )

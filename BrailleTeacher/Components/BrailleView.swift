@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BrailleView: View {
-    var brailleRepresentable: BrailleRepresentable
+    var brailleRepresentable: BrailleRepresentable?
     var isEditable: Bool
     
     var body: some View {
@@ -19,34 +19,14 @@ struct BrailleView: View {
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b10000000) >> 7 == 1,
+                    isSelected: brailleRepresentable?.isFirstDotSelected ?? false,
                     isEditable: isEditable
                 )
                 
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b01000000) >> 6 == 1,
-                    isEditable: isEditable
-                )
-                
-                Spacer(minLength: 4)
-            }
-            
-            Spacer(minLength: 4)
-            
-            HStack {
-                Spacer(minLength: 4)
-                
-                BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b00100000) >> 5 == 1,
-                    isEditable: isEditable
-                )
-                
-                Spacer(minLength: 4)
-                
-                BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b00010000) >> 4 == 1,
+                    isSelected: brailleRepresentable?.isSecondDotSelected ?? false,
                     isEditable: isEditable
                 )
                 
@@ -59,14 +39,34 @@ struct BrailleView: View {
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b00001000) >> 3 == 1,
+                    isSelected: brailleRepresentable?.isThirdDotSelected ?? false,
                     isEditable: isEditable
                 )
                 
                 Spacer(minLength: 4)
                 
                 BrailleViewButton(
-                    isSelected: (brailleRepresentable.toInt & 0b00000100) >> 2 == 1,
+                    isSelected: brailleRepresentable?.isFourthDotSelected ?? false,
+                    isEditable: isEditable
+                )
+                
+                Spacer(minLength: 4)
+            }
+            
+            Spacer(minLength: 4)
+            
+            HStack {
+                Spacer(minLength: 4)
+                
+                BrailleViewButton(
+                    isSelected: brailleRepresentable?.isFifthDotSelected ?? false,
+                    isEditable: isEditable
+                )
+                
+                Spacer(minLength: 4)
+                
+                BrailleViewButton(
+                    isSelected: brailleRepresentable?.isSixthDotSelected ?? false,
                     isEditable: isEditable
                 )
                 

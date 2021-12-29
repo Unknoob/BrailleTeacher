@@ -20,10 +20,10 @@ struct ClassView: View {
                 
                 Spacer(minLength: 20)
                 
-                KeyboardView(
-                    difficulty: .hard,
+                AdaptativeKeyboard(
+                    difficulty: classPlan.difficulty,
                     possibleAnswers: classPlan.possibleAnswers,
-                    correctAnswer: classPlan.challenges.first!.question
+                    challenge: classPlan.challenges.first!
                 )
                 
                 Spacer(minLength: 20)

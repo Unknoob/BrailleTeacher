@@ -11,6 +11,7 @@ struct ClassList {
     static let classes: [Class] = [
         Class(
             name: "A to E",
+            difficulty: .easy,
             includedCharacters: [
                 Letter.a,
                 Letter.b,
@@ -22,6 +23,7 @@ struct ClassList {
         ),
         Class(
             name: "F to J",
+            difficulty: .easy,
             includedCharacters: [
                 Letter.f,
                 Letter.g,
@@ -33,6 +35,7 @@ struct ClassList {
         ),
         Class(
             name: "A to J",
+            difficulty: .medium,
             includedCharacters: [
                 Letter.a,
                 Letter.b,

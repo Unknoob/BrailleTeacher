@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct BrailleViewButton: View {
-    @State var isSelected: Bool
+    @State var isSelected: Bool = false
     var isEditable: Bool
     
     var body: some View {
-        GeometryReader { metrics in
-            Circle()
-                .fill(isSelected ? .black : .gray)
-                .onTapGesture {
-                    if isEditable {
-                        self.isSelected = !isSelected
-                    }
+        Circle()
+            .fill(isSelected ? .black : .gray)
+            .onTapGesture {
+                if isEditable {
+                    self.isSelected = !isSelected
                 }
-        }
+            }
     }
 }
 
