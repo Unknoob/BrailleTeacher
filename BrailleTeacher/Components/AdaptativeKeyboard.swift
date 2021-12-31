@@ -20,6 +20,8 @@ struct AdaptativeKeyboard: View {
                 brailleRepresentable: nil,
                 isEditable: true
             )
+            .frame(width: 100, height: 150)
+            
         case .brailleToCharacter:
             KeyboardView(
                 difficulty: difficulty,

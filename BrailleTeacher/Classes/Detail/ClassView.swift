@@ -11,36 +11,60 @@ struct ClassView: View {
     @Binding var isBeingPresented: Bool
     @State var step: Int = 0
     @State var classPlan: ClassPlan
+    @State var finished: Bool = false
     
     var body: some View {
-        NavigationView {
+        if !finished {
             VStack {
-                Text(classPlan.challenges[step].question.toString)
-                    .font(.system(size: 26, weight: .bold))
+                HStack {
+                    Button("Give up") {
+                        isBeingPresented = false
+                    }
+                    .padding()
+                    .frame(alignment: .topLeading)
+                    
+                    Spacer()
+                }
                 
-                Spacer(minLength: 20)
+                AdaptativeBrailleView(challenge: classPlan.challenges[step])
+                    .frame(width: 100, height: 150)
+                
+                Spacer(minLength: 40)
                 
                 AdaptativeKeyboard(
                     difficulty: classPlan.difficulty,
                     possibleAnswers: classPlan.possibleAnswers,
                     challenge: classPlan.challenges[step],
-                    selectedAnswer: { answer in
-                        classPlan.challenges[step].answer = answer
-                        step += 1
-                    }
+                    selectedAnswer: selectedAnswer
                 )
+                
+                Spacer(minLength: 20)
+                
+                if classPlan.challenges[step].type == .characterToBraille {
+                    Button("Accept") {
+                        selectedAnswer(Letter.a)
+                    }
+                }
                 
                 Spacer(minLength: 20)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Give up") {
-                        isBeingPresented = false
-                    }
+                    
                 }
             }
+        } else {
+            ClassSuccessView()
         }
-        
+    }
+    
+    func selectedAnswer(_ answer: BrailleRepresentable) {
+        classPlan.challenges[step].answer = answer
+        if step < classPlan.challenges.count - 1 {
+            step += 1
+        } else {
+            finished = true
+        }
     }
 }
 

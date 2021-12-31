@@ -31,12 +31,12 @@ extension Class {
                     question: includedCharacter
                 )
             )
-//            challenges.append(
-//                ClassChallenge(
-//                    type: .characterToBraille,
-//                    question: includedCharacter
-//                )
-//            )
+            challenges.append(
+                ClassChallenge(
+                    type: .characterToBraille,
+                    question: includedCharacter
+                )
+            )
         }
         
         return ClassPlan(
