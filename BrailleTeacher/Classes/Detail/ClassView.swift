@@ -22,48 +22,53 @@ struct ClassView: View {
                     }
                     .padding()
                     .frame(alignment: .topLeading)
-                    
+                }
+                
+                VStack {
                     Spacer()
-                }
-                
-                AdaptativeBrailleView(challenge: classPlan.challenges[step])
-                    .frame(width: 100, height: 150)
-                
-                Spacer(minLength: 40)
-                
-                AdaptativeKeyboard(
-                    difficulty: classPlan.difficulty,
-                    possibleAnswers: classPlan.possibleAnswers,
-                    challenge: classPlan.challenges[step],
-                    selectedAnswer: selectedAnswer
-                )
-                
-                Spacer(minLength: 20)
-                
-                if classPlan.challenges[step].type == .characterToBraille {
-                    Button("Accept") {
-                        selectedAnswer(Letter.a)
-                    }
-                }
-                
-                Spacer(minLength: 20)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
                     
+                    AdaptativeBrailleView(challenge: classPlan.challenges[step])
+                        .frame(width: 100, height: 150)
+                    
+                    Spacer(minLength: 40)
+                    
+                    AdaptativeKeyboard(
+                        difficulty: classPlan.difficulty,
+                        possibleAnswers: classPlan.possibleAnswers,
+                        challenge: classPlan.challenges[step],
+                        selectedAnswer: selectedAnswer
+                    )
+                    
+                    Spacer(minLength: 20)
+                    
+                    if classPlan.challenges[step].type == .characterToBraille {
+                        BlueButton(text: "Accept") {
+                            selectedAnswer(Letter.a)
+                        }
+                    }
+                    
+                    Spacer(minLength: 20)
                 }
+                .transition(.opacity)
+                
             }
+            
         } else {
-            ClassSuccessView()
+            ClassSuccessView(isBeingPresented: $isBeingPresented)
+                .transition(.opacity)
         }
     }
     
     func selectedAnswer(_ answer: BrailleRepresentable) {
         classPlan.challenges[step].answer = answer
         if step < classPlan.challenges.count - 1 {
-            step += 1
+            withAnimation {
+                step += 1
+            }
         } else {
-            finished = true
+            withAnimation {
+                finished = true
+            }
         }
     }
 }
@@ -73,4 +78,3 @@ struct ClassView_Previews: PreviewProvider {
         ClassView(isBeingPresented: .constant(true), classPlan: ClassList.classes.first!.buildClassPlan())
     }
 }
-

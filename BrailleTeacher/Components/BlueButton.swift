@@ -1,5 +1,5 @@
 //
-//  HomeButton.swift
+//  BlueButton.swift
 //  BrailleTeacher
 //
 //  Created by Gabriel Beltrame Silva on 26/12/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeButton: View {
+struct BlueButton: View {
     var text: String
     var action: (() -> Void)?
     
@@ -26,6 +26,6 @@ struct HomeButton: View {
 
 struct HomeButton_Previews: PreviewProvider {
     static var previews: some View {
-        HomeButton(text: "Example", action: nil)
+        BlueButton(text: "Example", action: nil)
     }
 }

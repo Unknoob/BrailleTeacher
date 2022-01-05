@@ -30,11 +30,11 @@ struct HomeView: View {
                     }
                     .cornerRadius(15)
                     
-                    HomeButton(text: "Free Practice")
+                    BlueButton(text: "Free Practice")
                     
                     Spacer(minLength: 20)
                     
-                    HomeButton(text: "Settings")
+                    BlueButton(text: "Settings")
                     
                     Spacer(minLength: 20)
                 }

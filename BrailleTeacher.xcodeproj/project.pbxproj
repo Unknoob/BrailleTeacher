@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		002A215527792EE700E97313 /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215427792EE700E97313 /* HomeButton.swift */; };
+		002A215527792EE700E97313 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215427792EE700E97313 /* BlueButton.swift */; };
 		002A21572779324400E97313 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A21562779324400E97313 /* DictionaryView.swift */; };
 		002A215B2779329800E97313 /* BrailleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215A2779329800E97313 /* BrailleView.swift */; };
 		002A215E2779390800E97313 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215D2779390800E97313 /* Symbol.swift */; };
@@ -59,7 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002A215427792EE700E97313 /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		002A215427792EE700E97313 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		002A21562779324400E97313 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		002A215A2779329800E97313 /* BrailleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleView.swift; sourceTree = "<group>"; };
 		002A215D2779390800E97313 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		002A215327792EBD00E97313 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				002A215427792EE700E97313 /* HomeButton.swift */,
+				002A215427792EE700E97313 /* BlueButton.swift */,
 				002A215A2779329800E97313 /* BrailleView.swift */,
 				002A215F2779420900E97313 /* BrailleViewButton.swift */,
 				002A2161277943CE00E97313 /* BrailleTextView.swift */,
@@ -439,7 +439,7 @@
 				00464796277BC59D006591D6 /* KeyboardViewButton.swift in Sources */,
 				00B2B402277E751300CBCD0B /* ClassSuccessView.swift in Sources */,
 				0046479B277BE16A006591D6 /* AdaptativeKeyboard.swift in Sources */,
-				002A215527792EE700E97313 /* HomeButton.swift in Sources */,
+				002A215527792EE700E97313 /* BlueButton.swift in Sources */,
 				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
 				00B2B404277E7BFD00CBCD0B /* AdaptativeBrailleView.swift in Sources */,
 				00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */,

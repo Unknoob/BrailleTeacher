@@ -15,7 +15,7 @@ struct ClassListView: View {
         ScrollView {
             VStack {
                 ForEach(ClassList.classes) { currentClass in
-                    HomeButton(text: currentClass.name) {
+                    BlueButton(text: currentClass.name) {
                         selectedClass = currentClass
                         isPresentingModal.toggle()
                     }

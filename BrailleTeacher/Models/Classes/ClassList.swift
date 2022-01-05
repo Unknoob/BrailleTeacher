@@ -10,6 +10,14 @@ import Foundation
 struct ClassList {
     static let classes: [Class] = [
         Class(
+            name: "Test",
+            difficulty: .easy,
+            includedCharacters: [
+                Letter.a
+            ],
+            isPracticeMode: false
+        ),
+        Class(
             name: "A to E",
             difficulty: .easy,
             includedCharacters: [

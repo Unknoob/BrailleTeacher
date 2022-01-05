@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct ClassSuccessView: View {
+    @Binding var isBeingPresented: Bool
     
     var body: some View {
-            VStack {
-                Text("Sucesso")
-                    .font(.system(size: 26, weight: .bold))
-                
-                
+        VStack {
+            Spacer(minLength: 20)
+            
+            Text("Summary")
+                .font(.system(size: 26, weight: .bold))
+            
+            Spacer(minLength: 20)
+            
+            BlueButton(text: "Done") {
+                isBeingPresented = false
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Give up") {
-//                        isBeingPresented = false
-                    }
-                }
-            }
-
-        
+            
+            Spacer(minLength: 20)
+        }
     }
 }
 
 struct ClassSuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        ClassSuccessView()
+        ClassSuccessView(isBeingPresented: .constant(true))
     }
 }
