@@ -24,35 +24,13 @@ struct ClassView: View {
                     .frame(alignment: .topLeading)
                 }
                 
-                VStack {
-                    Spacer()
-                    
-                    AdaptativeBrailleView(challenge: classPlan.challenges[step])
-                        .frame(width: 100, height: 150)
-                    
-                    Spacer(minLength: 40)
-                    
-                    AdaptativeKeyboard(
-                        difficulty: classPlan.difficulty,
-                        possibleAnswers: classPlan.possibleAnswers,
-                        challenge: classPlan.challenges[step],
-                        selectedAnswer: selectedAnswer
-                    )
-                    
-                    Spacer(minLength: 20)
-                    
-                    if classPlan.challenges[step].type == .characterToBraille {
-                        BlueButton(text: "Accept") {
-                            selectedAnswer(Letter.a)
-                        }
-                    }
-                    
-                    Spacer(minLength: 20)
-                }
-                .transition(.opacity)
-                
+                ChallengeView(
+                    difficulty: classPlan.difficulty,
+                    possibleAnswers: classPlan.possibleAnswers,
+                    challenge: classPlan.challenges[step],
+                    selectedAnswer: selectedAnswer
+                )
             }
-            
         } else {
             ClassSuccessView(isBeingPresented: $isBeingPresented)
                 .transition(.opacity)

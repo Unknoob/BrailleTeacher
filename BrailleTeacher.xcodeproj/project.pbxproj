@@ -20,6 +20,7 @@
 		00464796277BC59D006591D6 /* KeyboardViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00464795277BC59D006591D6 /* KeyboardViewButton.swift */; };
 		00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00464798277BD1A7006591D6 /* Array+Extensions.swift */; };
 		0046479B277BE16A006591D6 /* AdaptativeKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */; };
+		006279DB278668DB00D983AC /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006279DA278668DB00D983AC /* ChallengeView.swift */; };
 		00B2B402277E751300CBCD0B /* ClassSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2B401277E751300CBCD0B /* ClassSuccessView.swift */; };
 		00B2B404277E7BFD00CBCD0B /* AdaptativeBrailleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2B403277E7BFD00CBCD0B /* AdaptativeBrailleView.swift */; };
 		00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A21827792B5C002C11BD /* BrailleTeacherApp.swift */; };
@@ -72,6 +73,7 @@
 		00464795277BC59D006591D6 /* KeyboardViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewButton.swift; sourceTree = "<group>"; };
 		00464798277BD1A7006591D6 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeKeyboard.swift; sourceTree = "<group>"; };
+		006279DA278668DB00D983AC /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		00B2B401277E751300CBCD0B /* ClassSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSuccessView.swift; sourceTree = "<group>"; };
 		00B2B403277E7BFD00CBCD0B /* AdaptativeBrailleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptativeBrailleView.swift; sourceTree = "<group>"; };
 		00B8A21527792B5C002C11BD /* BrailleTeacher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrailleTeacher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				00464795277BC59D006591D6 /* KeyboardViewButton.swift */,
 				0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */,
 				00B2B403277E7BFD00CBCD0B /* AdaptativeBrailleView.swift */,
+				006279DA278668DB00D983AC /* ChallengeView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				00B2B404277E7BFD00CBCD0B /* AdaptativeBrailleView.swift in Sources */,
 				00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */,
 				00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */,
+				006279DB278668DB00D983AC /* ChallengeView.swift in Sources */,
 				002A2169277990E500E97313 /* Letter.swift in Sources */,
 				00E43CB8277A7727003EA825 /* ClassChallenge.swift in Sources */,
 				002A215E2779390800E97313 /* Symbol.swift in Sources */,
