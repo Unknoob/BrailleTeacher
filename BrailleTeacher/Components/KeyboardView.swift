@@ -11,7 +11,8 @@ struct KeyboardView: View {
     let difficulty: ClassDifficulty
     let possibleAnswers: [BrailleRepresentable]
     let correctAnswer: BrailleRepresentable
-    let selectedAnswer: ((BrailleRepresentable) -> Void)?
+    @Binding var answer: Braille
+    @Binding var currentStep: Int
     
     var body: some View {
         let answers = AnswersManager.getAnswers(
@@ -28,7 +29,8 @@ struct KeyboardView: View {
                     ForEach(0 ..< gridSize, id: \.self) { column in
                         KeyboardViewButton(
                             answer: answers.object(at: line * gridSize + column),
-                            selectedAnswer: selectedAnswer
+                            selectedAnswer: $answer,
+                            currentStep: $currentStep
                         )
                     }
                 }
@@ -43,7 +45,8 @@ struct KeyboardView_Previews: PreviewProvider {
             difficulty: .easy,
             possibleAnswers: ClassList.classes.first!.includedCharacters,
             correctAnswer: Letter.a,
-            selectedAnswer: nil
+            answer: .constant(Braille()),
+            currentStep: .constant(0)
         )
     }
 }

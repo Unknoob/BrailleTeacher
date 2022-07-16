@@ -10,15 +10,17 @@ import SwiftUI
 struct AdaptativeKeyboard: View {
     let difficulty: ClassDifficulty
     let possibleAnswers: [BrailleRepresentable]
-    let challenge: ClassChallenge
-    let selectedAnswer: ((BrailleRepresentable) -> Void)?
+    @ObservedObject var challenge: ClassChallenge
+    @Binding var answer: Braille
+    @Binding var currentStep: Int
     
     var body: some View {
         switch challenge.type {
         case .characterToBraille:
-            BrailleView(
-                brailleRepresentable: nil,
-                isEditable: true
+            BrailleKeyboardView(
+                challenge: challenge,
+                answer: $answer,
+                currentStep: $currentStep
             )
             .frame(width: 100, height: 150)
             
@@ -27,7 +29,8 @@ struct AdaptativeKeyboard: View {
                 difficulty: difficulty,
                 possibleAnswers: possibleAnswers,
                 correctAnswer: challenge.question,
-                selectedAnswer: selectedAnswer
+                answer: $answer,
+                currentStep: $currentStep
             )
         }
         
@@ -40,7 +43,8 @@ struct AdaptativeKeyboard_Previews: PreviewProvider {
             difficulty: ClassList.classes.first!.difficulty,
             possibleAnswers: ClassList.classes.first!.includedCharacters,
             challenge: ClassList.classes.first!.buildClassPlan().challenges.first!,
-            selectedAnswer: nil
+            answer: .constant(Braille()),
+            currentStep: .constant(0)
         )
     }
 }

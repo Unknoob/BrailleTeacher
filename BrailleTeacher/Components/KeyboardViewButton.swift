@@ -9,14 +9,16 @@ import SwiftUI
 
 struct KeyboardViewButton: View {
     let answer: BrailleRepresentable?
-    var selectedAnswer: ((BrailleRepresentable) -> Void)?
+    @Binding var selectedAnswer: Braille
+    @Binding var currentStep: Int
     
     var body: some View {
         Button {
             guard let answer = answer else {
                 return
             }
-            selectedAnswer?(answer)
+            selectedAnswer = Braille(brailleRepresentable: answer)
+            currentStep += 1
         } label: {
             Text(answer?.toString ?? " ")
                 .frame(width: 30, height: 30)
@@ -33,6 +35,10 @@ struct KeyboardViewButton: View {
 
 struct KeyboardViewButton_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardViewButton(answer: Letter.h)
+        KeyboardViewButton(
+            answer: Braille(brailleRepresentable: Letter.h),
+            selectedAnswer: .constant(Braille()),
+            currentStep: .constant(0)
+        )
     }
 }

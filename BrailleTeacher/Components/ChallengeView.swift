@@ -10,8 +10,8 @@ import SwiftUI
 struct ChallengeView: View {
     let difficulty: ClassDifficulty
     let possibleAnswers: [BrailleRepresentable]
-    var challenge: ClassChallenge
-    let selectedAnswer: ((BrailleRepresentable) -> Void)?
+    @ObservedObject var challenge: ClassChallenge
+    @Binding var currentStep: Int
     
     var body: some View {
         VStack {
@@ -26,17 +26,9 @@ struct ChallengeView: View {
                 difficulty: difficulty,
                 possibleAnswers: possibleAnswers,
                 challenge: challenge,
-                selectedAnswer: selectedAnswer
+                answer: $challenge.answer,
+                currentStep: $currentStep
             )
-            
-            Spacer(minLength: 20)
-            
-            if challenge.type == .characterToBraille {
-                BlueButton(text: "Accept") {
-                    // TODO: Get correct BrailleRepresentable from AdaptativeKeyboard
-                    selectedAnswer?(Letter.a)
-                }
-            }
             
             Spacer(minLength: 20)
         }
@@ -51,7 +43,7 @@ struct ChallengeView_Previews: PreviewProvider {
             difficulty: classPlan.difficulty,
             possibleAnswers: classPlan.possibleAnswers,
             challenge: classPlan.challenges[0],
-            selectedAnswer: nil
+            currentStep: .constant(0)
         )
     }
 }

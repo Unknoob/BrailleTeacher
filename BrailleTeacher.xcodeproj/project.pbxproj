@@ -11,7 +11,7 @@
 		002A21572779324400E97313 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A21562779324400E97313 /* DictionaryView.swift */; };
 		002A215B2779329800E97313 /* BrailleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215A2779329800E97313 /* BrailleView.swift */; };
 		002A215E2779390800E97313 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215D2779390800E97313 /* Symbol.swift */; };
-		002A21602779420900E97313 /* BrailleViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215F2779420900E97313 /* BrailleViewButton.swift */; };
+		002A21602779420900E97313 /* BrailleDotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A215F2779420900E97313 /* BrailleDotButton.swift */; };
 		002A2162277943CE00E97313 /* BrailleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A2161277943CE00E97313 /* BrailleTextView.swift */; };
 		002A216527798A9500E97313 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A216427798A9500E97313 /* Colors.swift */; };
 		002A2167277990C100E97313 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002A2166277990C100E97313 /* Number.swift */; };
@@ -30,6 +30,8 @@
 		00B8A22A27792B60002C11BD /* BrailleTeacherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A22927792B60002C11BD /* BrailleTeacherTests.swift */; };
 		00B8A23427792B60002C11BD /* BrailleTeacherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A23327792B60002C11BD /* BrailleTeacherUITests.swift */; };
 		00B8A23627792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B8A23527792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift */; };
+		00C9AC36283840F2003C7B70 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9AC35283840F2003C7B70 /* Answer.swift */; };
+		00D6DE20287A7FA500339CA3 /* BrailleKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6DE1F287A7FA500339CA3 /* BrailleKeyboardView.swift */; };
 		00E43CAB277A71D0003EA825 /* ClassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAA277A71D0003EA825 /* ClassListView.swift */; };
 		00E43CAE277A727E003EA825 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAD277A727E003EA825 /* Class.swift */; };
 		00E43CB0277A734E003EA825 /* ClassList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CAF277A734E003EA825 /* ClassList.swift */; };
@@ -40,6 +42,7 @@
 		00E43CBE277AC0FE003EA825 /* ClassDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBD277AC0FE003EA825 /* ClassDifficulty.swift */; };
 		00E43CC0277AC210003EA825 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CBF277AC210003EA825 /* KeyboardView.swift */; };
 		00E43CC2277AC396003EA825 /* AnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E43CC1277AC396003EA825 /* AnswersManager.swift */; };
+		00E535632882815700A0D654 /* Braille.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E535622882815700A0D654 /* Braille.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,7 @@
 		002A21562779324400E97313 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		002A215A2779329800E97313 /* BrailleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleView.swift; sourceTree = "<group>"; };
 		002A215D2779390800E97313 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
-		002A215F2779420900E97313 /* BrailleViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleViewButton.swift; sourceTree = "<group>"; };
+		002A215F2779420900E97313 /* BrailleDotButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleDotButton.swift; sourceTree = "<group>"; };
 		002A2161277943CE00E97313 /* BrailleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTextView.swift; sourceTree = "<group>"; };
 		002A216427798A9500E97313 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		002A2166277990C100E97313 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		00B8A22F27792B60002C11BD /* BrailleTeacherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrailleTeacherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B8A23327792B60002C11BD /* BrailleTeacherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherUITests.swift; sourceTree = "<group>"; };
 		00B8A23527792B60002C11BD /* BrailleTeacherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleTeacherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00C9AC35283840F2003C7B70 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		00D6DE1F287A7FA500339CA3 /* BrailleKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrailleKeyboardView.swift; sourceTree = "<group>"; };
 		00E43CAA277A71D0003EA825 /* ClassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListView.swift; sourceTree = "<group>"; };
 		00E43CAD277A727E003EA825 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		00E43CAF277A734E003EA825 /* ClassList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassList.swift; sourceTree = "<group>"; };
@@ -96,6 +101,7 @@
 		00E43CBD277AC0FE003EA825 /* ClassDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDifficulty.swift; sourceTree = "<group>"; };
 		00E43CBF277AC210003EA825 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		00E43CC1277AC396003EA825 /* AnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersManager.swift; sourceTree = "<group>"; };
+		00E535622882815700A0D654 /* Braille.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Braille.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,13 +134,14 @@
 			children = (
 				002A215427792EE700E97313 /* BlueButton.swift */,
 				002A215A2779329800E97313 /* BrailleView.swift */,
-				002A215F2779420900E97313 /* BrailleViewButton.swift */,
+				002A215F2779420900E97313 /* BrailleDotButton.swift */,
 				002A2161277943CE00E97313 /* BrailleTextView.swift */,
 				00E43CBF277AC210003EA825 /* KeyboardView.swift */,
 				00464795277BC59D006591D6 /* KeyboardViewButton.swift */,
 				0046479A277BE16A006591D6 /* AdaptativeKeyboard.swift */,
 				00B2B403277E7BFD00CBCD0B /* AdaptativeBrailleView.swift */,
 				006279DA278668DB00D983AC /* ChallengeView.swift */,
+				00D6DE1F287A7FA500339CA3 /* BrailleKeyboardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -179,6 +186,8 @@
 				002A2166277990C100E97313 /* Number.swift */,
 				002A2168277990E500E97313 /* Letter.swift */,
 				002A216B2779917C00E97313 /* BrailleRepresentable.swift */,
+				00C9AC35283840F2003C7B70 /* Answer.swift */,
+				00E535622882815700A0D654 /* Braille.swift */,
 			);
 			path = Braille;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E535632882815700A0D654 /* Braille.swift in Sources */,
 				00E43CB6277A76F5003EA825 /* ClassPlan.swift in Sources */,
 				00E43CAB277A71D0003EA825 /* ClassListView.swift in Sources */,
 				002A216C2779917C00E97313 /* BrailleRepresentable.swift in Sources */,
@@ -443,8 +453,10 @@
 				00B2B402277E751300CBCD0B /* ClassSuccessView.swift in Sources */,
 				0046479B277BE16A006591D6 /* AdaptativeKeyboard.swift in Sources */,
 				002A215527792EE700E97313 /* BlueButton.swift in Sources */,
-				002A21602779420900E97313 /* BrailleViewButton.swift in Sources */,
+				00C9AC36283840F2003C7B70 /* Answer.swift in Sources */,
+				002A21602779420900E97313 /* BrailleDotButton.swift in Sources */,
 				00B2B404277E7BFD00CBCD0B /* AdaptativeBrailleView.swift in Sources */,
+				00D6DE20287A7FA500339CA3 /* BrailleKeyboardView.swift in Sources */,
 				00464799277BD1A7006591D6 /* Array+Extensions.swift in Sources */,
 				00B8A21927792B5C002C11BD /* BrailleTeacherApp.swift in Sources */,
 				006279DB278668DB00D983AC /* ChallengeView.swift in Sources */,

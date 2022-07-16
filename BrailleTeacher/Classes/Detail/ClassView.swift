@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ClassView: View {
     @Binding var isBeingPresented: Bool
-    @State var step: Int = 0
-    @State var classPlan: ClassPlan
-    @State var finished: Bool = false
+    @ObservedObject var classPlan: ClassPlan
     
     var body: some View {
-        if !finished {
+        if classPlan.hasNextChallenge() {
             VStack {
                 HStack {
                     Button("Give up") {
@@ -27,26 +25,13 @@ struct ClassView: View {
                 ChallengeView(
                     difficulty: classPlan.difficulty,
                     possibleAnswers: classPlan.possibleAnswers,
-                    challenge: classPlan.challenges[step],
-                    selectedAnswer: selectedAnswer
+                    challenge: classPlan.challenges[classPlan.currentStep],
+                    currentStep: $classPlan.currentStep
                 )
             }
         } else {
             ClassSuccessView(isBeingPresented: $isBeingPresented)
                 .transition(.opacity)
-        }
-    }
-    
-    func selectedAnswer(_ answer: BrailleRepresentable) {
-        classPlan.challenges[step].answer = answer
-        if step < classPlan.challenges.count - 1 {
-            withAnimation {
-                step += 1
-            }
-        } else {
-            withAnimation {
-                finished = true
-            }
         }
     }
 }

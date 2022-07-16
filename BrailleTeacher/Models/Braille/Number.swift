@@ -31,6 +31,13 @@ extension Number: Identifiable {
 
 // MARK: - BrailleRepresentable
 extension Number: BrailleRepresentable {
+    init?(intValue: UInt8) {
+        guard let number = Number.allCases.first(where: { $0.toInt == intValue }) else {
+            return nil
+        }
+        self = number
+    }
+    
     var toInt: UInt8 {
         switch self {
         case .zero:

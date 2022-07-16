@@ -18,18 +18,24 @@ struct DictionaryView: View {
             LazyVGrid(columns: columns, spacing: 6) {
                 Section(header: Text("Letters").font(.title)) {
                     ForEach(Letter.allCases) { letter in
-                        BrailleTextView(brailleRepresentable: letter, isEditable: false)
+                        BrailleTextView(braille: Braille(brailleRepresentable: letter), isEditable: false)
                             .frame(minHeight: 120, maxHeight: 140)
                     }
                 }
                 Section(header: Text("Numbers").font(.title)) {
                     ForEach(Number.allCases) { number in
-                        BrailleTextView(brailleRepresentable: number, isEditable: false)
+                        BrailleTextView(braille: Braille(brailleRepresentable: number), isEditable: false)
+                            .frame(minHeight: 120, maxHeight: 140)
+                    }
+                }
+                Section(header: Text("Symbols").font(.title)) {
+                    ForEach(Symbol.allCases) { symbol in
+                        BrailleTextView(braille: Braille(brailleRepresentable: symbol), isEditable: false)
                             .frame(minHeight: 120, maxHeight: 140)
                     }
                 }
                 
-            }
+            }.padding(6)
         }
         .navigationTitle("Dictionary")
     }

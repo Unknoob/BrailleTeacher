@@ -34,11 +34,11 @@ class AnswersManager {
         var answers: [BrailleRepresentable] = Array(possibleAnswers.shuffled().prefix(answersNeeded))
         
         if answers.contains(where: { $0.toInt == correctAnswer.toInt }) {
-            return answers
+            return answers//.map({ Braille(brailleRepresentable: $0) })
         } else {
             answers = answers.dropLast()
             answers.append(correctAnswer)
-            return answers.shuffled()
+            return answers.shuffled()//.map({ Braille(brailleRepresentable: $0) })
         }
     }
 }

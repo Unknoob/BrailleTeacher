@@ -6,10 +6,30 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct ClassPlan {
+class ClassPlan: ObservableObject {
     let name: String
     let difficulty: ClassDifficulty
     let possibleAnswers: [BrailleRepresentable]
-    var challenges: [ClassChallenge]
+    @Published var currentStep: Int
+    @Published var challenges: [ClassChallenge]
+    
+    init(
+        name: String,
+        difficulty: ClassDifficulty,
+        possibleAnswers: [BrailleRepresentable],
+        currentStep: Int = 0,
+        challenges: [ClassChallenge]
+    ) {
+        self.name = name
+        self.difficulty = difficulty
+        self.possibleAnswers = possibleAnswers
+        self.currentStep = currentStep
+        self.challenges = challenges
+    }
+    
+    func hasNextChallenge() -> Bool {
+        return currentStep < challenges.count
+    }
 }

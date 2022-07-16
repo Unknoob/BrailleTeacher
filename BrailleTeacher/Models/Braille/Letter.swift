@@ -47,6 +47,13 @@ extension Letter: Identifiable {
 
 // MARK: - BrailleRepresentable
 extension Letter: BrailleRepresentable {
+    init?(intValue: UInt8) {
+        guard let letter = Letter.allCases.first(where: { $0.toInt == intValue }) else {
+            return nil
+        }
+        self = letter
+    }
+    
     var toInt: UInt8 {
         switch self {
         case .a:

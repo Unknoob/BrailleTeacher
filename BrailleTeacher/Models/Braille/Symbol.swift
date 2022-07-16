@@ -17,7 +17,6 @@ enum Symbol: String, CaseIterable {
     case singleQuote = "'"
     case colon = ":"
     case semicolon = ";"
-    
 }
 
 // MARK: - Identifiable
@@ -29,6 +28,13 @@ extension Symbol: Identifiable {
 
 // MARK: - BrailleRepresentable
 extension Symbol: BrailleRepresentable {
+    init?(intValue: UInt8) {
+        guard let symbol = Symbol.allCases.first(where: { $0.toInt == intValue }) else {
+            return nil
+        }
+        self = symbol
+    }
+    
     var toInt: UInt8 {
         switch self {
         case .comma:

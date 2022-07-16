@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AdaptativeBrailleView: View {
-    let challenge: ClassChallenge
+    @ObservedObject var challenge: ClassChallenge
     
     var body: some View {
         switch challenge.type {
         case .brailleToCharacter:
-            BrailleView(brailleRepresentable: challenge.question, isEditable: false)
+            BrailleView(braille: Braille(brailleRepresentable: challenge.question), isEditable: false)
         case .characterToBraille:
             Text(challenge.question.toString)
                 .font(.system(size: 26, weight: .bold))
@@ -23,6 +23,8 @@ struct AdaptativeBrailleView: View {
 
 struct AdaptativeBrailleView_Previews: PreviewProvider {
     static var previews: some View {
-        AdaptativeBrailleView(challenge: ClassList.classes.first!.buildClassPlan().challenges.first!)
+        AdaptativeBrailleView(
+            challenge: ClassList.classes.first!.buildClassPlan().challenges.first!
+        )
     }
 }
